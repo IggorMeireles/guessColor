@@ -1,6 +1,6 @@
 const ball = document.querySelectorAll('.ball');
 const text = document.getElementById('answer');
-const rbgText = document.querySelector('#rgb-color');
+const rgbText = document.querySelector('#rgb-color');
 const reset = document.getElementById('reset-game');
 const scoreboard = document.getElementById('score');
 
@@ -17,10 +17,10 @@ const randomColor = () => {
 
 const changeColor = () => {
     for (let i = 0; i < ball.length; i += 1) {
-        ball[i].style.backgroundColor = randomColor();
-        correctElement = ball[2];
+        ball[i].style.backgroundColor = randomColor();        
     }
-    ball[2].style.backgroundColor = 'rgb(168, 34,1)';
+    correctElement = ball[2];
+    ball[2].style.backgroundColor = 'rgb' + rgbText.innerHTML;
 };
 
 const getIndex = (password) => {
@@ -52,10 +52,11 @@ window.onload = () => {
     changeColor();
     getIndex();
     scoreboard.innerHTML = 0;
-    rbgText.innerHTML = randomAnswer();
+    rgbText.innerHTML = randomAnswer();
+    ball[2].style.backgroundColor = 'rgb' + rgbText.innerHTML;
     reset.addEventListener('click', () => {
-        changeColor();
-        rbgText.innerHTML = randomAnswer();
+        rgbText.innerHTML = randomAnswer();
+        changeColor();        
         text.innerHTML = 'Escolha uma cor';
     })
 };
