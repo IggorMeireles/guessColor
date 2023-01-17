@@ -7,6 +7,7 @@ const scoreboard = document.getElementById('score');
 let password;
 let correctElement;
 let counter = 0;
+let tester;
 
 const randomColor = () => {
     const r = Math.trunc(Math.random() * 254);
@@ -17,18 +18,17 @@ const randomColor = () => {
 
 const changeColor = () => {
     for (let i = 0; i < ball.length; i += 1) {
-        ball[i].style.backgroundColor = randomColor();        
+        ball[i].style.backgroundColor = randomColor();
     }
     correctElement = ball[2];
-    ball[2].style.backgroundColor = 'rgb' + rgbText.innerHTML;
+    ball[tester].style.backgroundColor = 'rgb' + rgbText.innerHTML;
 };
 
 const getIndex = (password) => {
     ball.forEach((key, index) => {
         key.addEventListener("click", () => {
             password = index;
-            console.log(password);
-            if (password === 2) {
+            if (password === tester) {
                 text.innerHTML = 'Acertou!';
                 counter = counter + 3;
                 scoreboard.innerHTML = counter;
@@ -46,17 +46,24 @@ const randomAnswer = () => {
     return `(${r}, ${g}, ${b})`;
 }
 
-
+const randomIndex = () => {
+    tester = Math.trunc(Math.random() * 10);
+    while (tester > 5) {
+        tester = Math.trunc(tester / 2);
+    }
+}
 
 window.onload = () => {
+    randomIndex();
     changeColor();
     getIndex();
     scoreboard.innerHTML = 0;
     rgbText.innerHTML = randomAnswer();
-    ball[2].style.backgroundColor = 'rgb' + rgbText.innerHTML;
+    ball[tester].style.backgroundColor = 'rgb' + rgbText.innerHTML;
     reset.addEventListener('click', () => {
+        randomIndex();
         rgbText.innerHTML = randomAnswer();
-        changeColor();        
+        changeColor();
         text.innerHTML = 'Escolha uma cor';
     })
 };
