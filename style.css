@@ -1,0 +1,86 @@
+* {
+    margin: auto;
+    background-color: #00acff;
+}
+
+.ball {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    border: 2px black solid;
+}
+
+#reset-game {
+    display: block;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #00f8ff;
+    color: black;
+    font-size: 20px;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    background-color: #00000d;
+    padding: 15px;
+}
+
+#rgb {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -10px;
+    color: aliceblue;
+}
+
+#answer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 25px;
+    background-color: #003051;
+    color: aliceblue;
+}
+
+#qual {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: aliceblue;
+    background-color: #003051;
+}
+
+#score {
+    display: flex;
+    justify-content: center;
+    font-size: 80px;
+    color: aliceblue;
+    background-color: #0069a4;
+}
+
+#bola {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #0069a4;
+}
+
+#adivinha, #rgb {
+    background-color: #003051;
+}
+
+#bolota {
+    background-color: #0069a4;
+}
+
+#rgb-color {
+    background-color: #003051;
+}
+
