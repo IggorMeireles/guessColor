@@ -7,9 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+
     <section id="title">
         <h1 id="title">Color Guess</h1>
     </section>
@@ -38,7 +47,13 @@
     <section id="reset">
         <button id="reset-game">Reiniciar jogo</button>
     </section>
-
+    <div id="modal">
+        <p id="game-over">Game Over</p>
+        <p id="voce-errou">Você errou!</p>
+        <p id="sua-pontuacao">Sua pontuação:</p>
+        <p id="scoreboard-final"></p>
+        <button id="btnGameOver" onclick="">Tentar novamente</button>
+    </div>
     <script src="./script.js"></script>
 </body>
 

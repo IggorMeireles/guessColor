@@ -3,6 +3,8 @@ const text = document.getElementById('answer');
 const rgbText = document.querySelector('#rgb-color');
 const reset = document.getElementById('reset-game');
 const scoreboard = document.getElementById('score');
+const modal = document.getElementById('modal');
+const finalScoreboard = document.getElementById('scoreboard-final');
 
 let password;
 let correctElement;
@@ -33,7 +35,18 @@ const getIndex = (password) => {
                 counter = counter + 3;
                 scoreboard.innerHTML = counter;
             } else {
-                text.innerHTML = 'Errou! Tente novamente!';
+                modal.style.display = 'block';
+                btnGameOver.addEventListener('click', () => {
+                    randomIndex();
+                    rgbText.innerHTML = randomAnswer();
+                    changeColor();
+                    text.innerHTML = 'Escolha uma cor';
+                    modal.style.display = 'none';
+                })
+                finalScoreboard.innerHTML = counter;
+                counter = 0;
+                scoreboard.innerHTML = counter;
+
             }
         });
     });

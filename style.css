@@ -2,9 +2,21 @@
     margin: auto;
 }
 
+#modal {
+    height: 600px;
+    width: 700px;
+    background-color: #ffd5f4;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20%;
+}
+
 body {
     height: 1000px;
-    background-image: linear-gradient(45deg,#120a15,#20dad8);
+    background-image: linear-gradient(45deg, #1f2c5a 10%, #595baf);
 }
 
 #qual {
@@ -26,9 +38,9 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
-    margin-top: -10px;
     color: aliceblue;
     font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .ball {
@@ -60,8 +72,7 @@ body {
 #title {
     display: flex;
     justify-content: center;
-    color: aliceblue;
-    background-color: #00000d;
+    color: aliceblue;;
     padding: 15px;
 }
 
@@ -71,4 +82,50 @@ body {
     font-size: 80px;
     color: aliceblue;
     margin: 10px;
+}
+
+#btnGameOver {
+    display: block;
+    padding: 20px;
+    border-radius: 50px;
+    color: black;
+    font-size: 20px;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+#btnGameOver:hover {
+    background-color: #747873;
+}
+
+#scoreboard-final {
+    display: block;
+    font-size: 80px;
+    color: black;
+    margin-left: 330px;
+    margin-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#game-over {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 500%;
+    display: block;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+#voce-errou {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+#sua-pontuacao {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    margin-left: 275px;
+    margin-top: 40px;
 }
