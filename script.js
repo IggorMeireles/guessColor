@@ -1,3 +1,7 @@
+//
+//  Declarar elementos
+//
+
 const ball = document.querySelectorAll('.ball');
 const text = document.getElementById('answer');
 const rgbText = document.querySelector('#rgb-color');
@@ -6,10 +10,18 @@ const scoreboard = document.getElementById('score');
 const modal = document.getElementById('modal');
 const finalScoreboard = document.getElementById('scoreboard-final');
 
+//
+//  Variáveis
+//
+
 let password;
 let correctElement;
 let counter = 0;
 let tester;
+
+//
+//  Funções
+//
 
 const randomColor = () => {
     const r = Math.trunc(Math.random() * 254);
@@ -65,6 +77,10 @@ const randomIndex = () => {
         tester = Math.trunc(tester / 2);
     }
 }
+
+//
+//  ONLOAD
+//
 
 window.onload = () => {
     randomIndex();
